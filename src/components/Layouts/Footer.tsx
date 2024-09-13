@@ -28,7 +28,9 @@ const Footer: React.FC = () => {
                     />
                   </Link>
                   <p>
-                    Khá lỏ múa quạt cân 5
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud.
                   </p>
                 </div>
 

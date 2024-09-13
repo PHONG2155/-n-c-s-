@@ -8234,5 +8234,158 @@ Footer Wrap Area CSS
   z-index: -1;
   animation: animationFramesOne 20s infinite linear;
 }
+/* Swiper Styles */
+.product-image-slider {
+  position: relative;
+}
+
+.product-image-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image-slider .swiper-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-slider .swiper-button-next,
+.product-image-slider .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-image-slider .swiper-button-next:hover,
+.product-image-slider .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.product-image-slider .swiper-pagination-bullet {
+  background-color: #ddd;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+
+.product-image-slider .swiper-pagination-bullet-active {
+  background-color: #ff5e5e;
+}
+/* loader */
+/* Phong cách cho loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 0.4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Phong cách cho phần shop */
+.shop-area {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.single-product-box {
+  border: 1px solid #ebebeb;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.single-product-box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.product-image:hover img {
+  opacity: 0.7;
+}
+
+.product-content {
+  margin-top: 15px;
+}
+
+.product-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-content .price {
+  font-size: 16px;
+}
+
+.product-content .new {
+  color: #3498db;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.product-content .old {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Phong cách cho pagination */
+.pagination-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.page-numbers {
+  color: #3498db;
+  margin: 0 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.page-numbers.current {
+  color: #333;
+  font-weight: bold;
+}
+
+.page-numbers:hover {
+  text-decoration: underline;
+}
+
+.prev, .next {
+  font-size: 18px;
+}
+
+.prev:hover, .next:hover {
+  text-decoration: underline;
+}
+
 
 /*End "Home Demo - 6", "Home Demo - 7" & "Home Demo - 8" Style CSS*//*# sourceMappingURL=style.css.map */

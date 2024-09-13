@@ -3,6 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Import Swiper styles
+import "swiper/css/navigation";
+import "swiper/css/pagination"; // Import pagination styles
+import { Navigation, Pagination } from "swiper/modules";
 import RelatedProducts from "../SingleProducts/RelatedProducts";
 import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab";
 
@@ -18,38 +23,53 @@ const SingleProductsContent: React.FC = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
-            <Image
-              src="/images/shop/product4.jpg"
-              alt="product"
-              width={800}
-              height={850}
-            />
+            {/* Swiper slider */}
+            <Swiper
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[Navigation, Pagination]}
+              className="product-image-slider"
+            >
+              <SwiperSlide>
+                <Image
+                  src="/images/shop/nam1.jpg"
+                  alt="product"
+                  width={800}
+                  height={850}
+                  style={{ borderRadius: "10px" }}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/shop/nam1.1.jpg"
+                  alt="product"
+                  width={800}
+                  height={850}
+                  style={{ borderRadius: "10px" }}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/shop/nam1.2.jpg"
+                  alt="product"
+                  width={800}
+                  height={850}
+                  style={{ borderRadius: "10px" }}
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
 
           <div className="col-lg-6">
             <div className="product-details-desc">
-              <h3>Red Side Book</h3>
+              <h3>ÁO SƠ MI NGẮN TAY HỌA TIẾT</h3>
 
               <div className="price">
-                <span className="new-price">$14.00</span>
-                <span className="old-price">$20.00</span>
+                <span className="new-price">320.000 VNĐ</span>
+                <span className="old-price">400.000 VNĐ</span>
               </div>
-
-              <div className="product-review">
-                <div className="rating">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star-half-alt"></i>
-                </div>
-                <Link href="#" className="rating-count">
-                  3 reviews
-                </Link>
-              </div>
-
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Chọn size
               </p>
 
               {/* Radio Button Group */}
@@ -109,7 +129,7 @@ const SingleProductsContent: React.FC = () => {
 
                 <div style={{ marginTop: "20px" }}>
                   <button className="btn btn-primary">
-                    <i className="fas fa-cart-plus"></i> Add to Cart
+                    <i className="fas fa-cart-plus"></i> Thêm vào giỏ hàng
                   </button>
                 </div>
               </div>

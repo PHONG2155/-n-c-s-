@@ -1,12 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Products: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  // Giả lập thời gian load để hiện animation
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500); // 2 giây để mô phỏng thời gian tải
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      {loading && (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      )}
       <div className="shop-area ptb-110">
         <div className="container">
           <div className="woocommerce-topbar">
@@ -34,18 +49,51 @@ const Products: React.FC = () => {
           </div>
 
           <div className="row justify-content-center">
+            {/* Sản phẩm 1 */}
+            <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="single-product-box">
+                <div className="product-image">
+                  <Link href="/shop/single-products">
+                    <Image
+                      src="/images/shop/nam1.jpg"
+                      alt="image"
+                      width={800}
+                      height={850}
+                    />
+                    <Image
+                      src="/images/shop/nam1.1.jpg"
+                      alt="image"
+                      width={800}
+                      height={850}
+                    />
+                  </Link>
+                </div>
+
+                <div className="product-content">
+                  <h3>
+                    <Link href="/shop/single-products2">ÁO SƠ MI NGẮN TAY HỌA TIẾT</Link>
+                  </h3>
+                  <div className="price">
+                    <span className="new">320.000 VNĐ</span>
+                    <span className="old">400.000 VNĐ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sản phẩm 2 */}
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
                   <Link href="/shop/single-products2">
                     <Image
-                      src="/images/shop/product1.jpg"
+                      src="/images/shop/nam2.jpg"
                       alt="image"
                       width={800}
                       height={850}
                     />
                     <Image
-                      src="/images/shop/product-hover1.jpg"
+                      src="/images/shop/nam2.1.jpg"
                       alt="image"
                       width={800}
                       height={850}
@@ -55,76 +103,94 @@ const Products: React.FC = () => {
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products2">White Book</Link>
+                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY MÀU TRẮNG</Link>
                   </h3>
                   <div className="price">
-                    <span className="new">$8.50</span>
-                    <span className="old">$12.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
+                    <span className="new">310.000 VNĐ</span>
+                    <span className="old">380.000 VNĐ</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Sản phẩm 3 */}
+            <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="single-product-box">
+                <div className="product-image">
+                  <Link href="/shop/single-products3">
+                    <Image
+                      src="/images/shop/nam3.jpg"
+                      alt="image"
+                      width={800}
+                      height={850}
+                    />
+                    <Image
+                      src="/images/shop/nam3.1.jpg"
+                      alt="image"
+                      width={800}
+                      height={850}
+                    />
+                  </Link>
+                </div>
+
+                <div className="product-content">
+                  <h3>
+                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY MÀU ĐEN</Link>
+                  </h3>
+                  <div className="price">
+                    <span className="new">290.000 VNĐ</span>
+                    <span className="old">350.000 VNĐ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sản phẩm 4: XANH BIỂN KẺ */}
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
                   <Link href="/shop/single-products">
                     <Image
-                      src="/images/shop/product2.jpg"
-                      alt="image"
+                      src="/images/shop/nam4.jpg"
+                      alt="XANH BIỂN KẺ"
                       width={800}
                       height={850}
                     />
                     <Image
-                      src="/images/shop/product-hover2.jpg"
-                      alt="image"
+                      src="/images/shop/nam4.1.jpg"
+                      alt="XANH BIỂN KẺ"
                       width={800}
                       height={850}
                     />
                   </Link>
-
-                  <div className="sale-btn">Sale!</div>
                 </div>
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products">Red Side Book</Link>
+                    <Link href="/shop/single-products">XANH BIỂN KẺ</Link>
                   </h3>
                   <div className="price">
-                    <span className="new">$12.50</span>
-                    <span className="old">$20.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star-half-alt"></i>
+                    <span className="new">270.000 VNĐ</span>
+                    <span className="old">320.000 VNĐ</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Sản phẩm 5: ÁO SƠ MI NGẮN TAY TRẮNG SAO */}
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
                   <Link href="/shop/single-products">
                     <Image
-                      src="/images/shop/product3.jpg"
-                      alt="image"
+                      src="/images/shop/nam5.jpg"
+                      alt="ÁO SƠ MI NGẮN TAY TRẮNG SAO"
                       width={800}
                       height={850}
                     />
                     <Image
-                      src="/images/shop/product-hover3.jpg"
-                      alt="image"
+                      src="/images/shop/nam5.1.jpg"
+                      alt="ÁO SƠ MI NGẮN TAY TRẮNG SAO"
                       width={800}
                       height={850}
                     />
@@ -133,36 +199,29 @@ const Products: React.FC = () => {
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products">Book With Pen</Link>
+                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY TRẮNG SAO</Link>
                   </h3>
                   <div className="price">
-                    <span className="new">$8.50</span>
-                    <span className="old">$12.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="far fa-star"></i>
+                    <span className="new">280.000 VNĐ</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Sản phẩm 6: ÁO SƠ MI NGẮN TAY XANH CARO */}
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
                   <Link href="/shop/single-products">
                     <Image
-                      src="/images/shop/product4.jpg"
-                      alt="image"
+                      src="/images/shop/nam6.jpg"
+                      alt="ÁO SƠ MI NGẮN TAY XANH CARO"
                       width={800}
                       height={850}
                     />
                     <Image
-                      src="/images/shop/product-hover4.jpg"
-                      alt="image"
+                      src="/images/shop/nam6.1.jpg"
+                      alt="ÁO SƠ MI NGẮN TAY XANH CARO"
                       width={800}
                       height={850}
                     />
@@ -171,113 +230,32 @@ const Products: React.FC = () => {
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products">Drop Side Book</Link>
+                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY XANH CARO</Link>
                   </h3>
                   <div className="price">
-                    <span className="new">$7.50</span>
-                    <span className="old">$11.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
+                    <span className="new">300.000 VNĐ</span>
+                    <span className="old">360.000 VNĐ</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-product-box">
-                <div className="product-image">
-                  <Link href="/shop/single-products">
-                    <Image
-                      src="/images/shop/product5.jpg"
-                      alt="image"
-                      width={800}
-                      height={850}
-                    />
-                    <Image
-                      src="/images/shop/product-hover5.jpg"
-                      alt="image"
-                      width={800}
-                      height={850}
-                    />
-                  </Link>
-                </div>
-
-                <div className="product-content">
-                  <h3>
-                    <Link href="/shop/single-products">Color Book</Link>
-                  </h3>
-                  <div className="price">
-                    <span className="new">$10.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <div className="single-product-box">
-                <div className="product-image">
-                  <Link href="/shop/single-products">
-                    <Image
-                      src="/images/shop/product6.jpg"
-                      alt="image"
-                      width={800}
-                      height={850}
-                    />
-                    <Image
-                      src="/images/shop/product-hover6.jpg"
-                      alt="image"
-                      width={800}
-                      height={850}
-                    />
-                  </Link>
-                </div>
-
-                <div className="product-content">
-                  <h3>
-                    <Link href="/shop/single-products">Last Book</Link>
-                  </h3>
-                  <div className="price">
-                    <span className="new">$15.00</span>
-                    <span className="old">$20.50</span>
-                  </div>
-                  <div className="rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            {/* Pagination */}
             <div className="col-lg-12 col-md-12">
               <div className="pagination-area">
                 <a href="#" className="prev page-numbers">
                   <i className="fas fa-angle-double-left"></i>
                 </a>
-                <a href="#" className="page-numbers">
+                <a href="/shop/page/1" className="page-numbers">
                   1
                 </a>
                 <span className="page-numbers current" aria-current="page">
                   2
                 </span>
-                <a href="#" className="page-numbers">
+                <a href="/shop/page/3" className="page-numbers">
                   3
                 </a>
-                <a href="#" className="page-numbers">
+                <a href="/shop/page/4" className="page-numbers">
                   4
                 </a>
                 <a href="#" className="next page-numbers">

@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import pagination styles
 import { Navigation, Pagination } from "swiper/modules";
 import RelatedProducts from "../SingleProducts/RelatedProducts";
-import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab2";
+import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab3";
 
 const SingleProductsContent: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
