@@ -8,20 +8,18 @@ const Description: React.FC = () => {
       <div className="tabs_item">
         <div className="products-details-tab-content">
           <p>
-FORM DÁNG: Dáng ôm / Slim fit
+          FORM DÁNG: Dáng vừa/ Regular Fit
 </p>
 <p>
 THIẾT KẾ:
-- Áo sơ mi ngắn tay phom Slim Fit ôm nhẹ vừa vặn mà vẫn thoải mái vận động.
-- Áo thiết kế đơn giản, tà lượn không túi, cùng họa tiết xám in họa tiết nổi bật tạo hiệu ứng ấn tượng, mang đến phong cách thời thượng và lịch lãm cho các quý ông.
-</p>
+- Áo sơ mi ngắn tay phom Perfect fit suông rộng mặc thả ngoài mà vẫn đảm bảo độ lịch sự chỉn chu cho người mặc.
+- Áo thiết kế với tà bằng, có túi ngực, màu đen tinh tế nam tính, mang đến vẻ ngoài lịch lãm và thời thượng.
 <p>
 CHẤT LIỆU:
-- 49% Bamboo từ sợi tre thiên nhiên mang đến sự thoáng mát, thấm hút tốt và tạo cảm giác thoải mái.
-- 48% Polyester giúp áo mỏng nhẹ, có độ trơn trượt, màu sắc nét và giữ màu tốt theo thời gian.
-- 3% Spandex tạo độ co giãn thoải mái khi mặc.
+- 50% Bamboo từ sợi tre thiên nhiên mang đến sự thoáng mát, thấm hút tốt và tạo cảm giác thoải mái.
+- 50% Polyester giúp áo mỏng nhẹ, có độ trơn trượt, màu sắc nét và giữ màu tốt theo thời gian.</p>
 
-MÀU SẮC: Xám in họa tiết
+<p>MÀU SẮC: MÀU SẮC: Đen solisd</p>
           </p>
         </div>
       </div>

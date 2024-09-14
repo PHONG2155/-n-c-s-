@@ -1,21 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Import Swiper styles
 import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import pagination styles
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
 import RelatedProducts from "../SingleProducts/RelatedProducts";
 import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab2";
 
 const SingleProductsContent: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
+  const swiperRef = useRef<any>(null); // Create a ref for Swiper instance
+  const totalSlides = 3; // Set total number of slides
 
   const changeQuantity = (amount: number) => {
     setQuantity((prev) => Math.max(1, prev + amount));
+  };
+
+  const handleSlideChange = () => {
+    if (swiperRef.current) {
+      const { activeIndex, slides } = swiperRef.current.swiper;
+      if (activeIndex === slides.length - 1) {
+        swiperRef.current.swiper.autoplay.stop(); // Stop autoplay when reaching the last slide
+      }
+    }
   };
 
   return (
@@ -25,14 +36,18 @@ const SingleProductsContent: React.FC = () => {
           <div className="col-lg-6">
             {/* Swiper slider */}
             <Swiper
+              ref={swiperRef}
               navigation={true}
               pagination={{ clickable: true }}
-              modules={[Navigation, Pagination]}
+              autoplay={{ delay: 1000, disableOnInteraction: false }} // Autoplay configuration
+              modules={[Navigation, Pagination, Autoplay]} // Include Autoplay module
+              onSlideChange={handleSlideChange} // Handle slide change
               className="product-image-slider"
             >
+            
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.jpg"
+                  src="/images/shop/nam2.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -41,7 +56,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.1.jpg"
+                  src="/images/shop/nam2.1.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -50,7 +65,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.2.jpg"
+                  src="/images/shop/nam2.2.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -62,11 +77,11 @@ const SingleProductsContent: React.FC = () => {
 
           <div className="col-lg-6">
             <div className="product-details-desc">
-              <h3>ÁO SƠ MI NGẮN TAY HỌA TIẾT</h3>
+              <h3>ÁO SƠ MI NGẮN TAY TRẮNG</h3>
 
               <div className="price">
-                <span className="new-price">320.000 VNĐ</span>
-                <span className="old-price">400.000 VNĐ</span>
+                <span className="new-price">310.000 VNĐ</span>
+                <span className="old-price">380.000 VNĐ</span>
               </div>
               <p>
                Chọn size

@@ -7,7 +7,7 @@ const Description: React.FC = () => {
     <>
       <div className="tabs_item">
         <div className="products-details-tab-content">
-        <p>
+          <p>
 FORM DÁNG: Dáng ôm / Slim fit
 </p>
 <p>
@@ -17,12 +17,13 @@ THIẾT KẾ:
 </p>
 <p>
 CHẤT LIỆU:
-- 49% Bamboo từ sợi tre thiên nhiên mang đến sự thoáng mát, thấm hút tốt và tạo cảm giác thoải mái.
-- 48% Polyester giúp áo mỏng nhẹ, có độ trơn trượt, màu sắc nét và giữ màu tốt theo thời gian.
-- 3% Spandex tạo độ co giãn thoải mái khi mặc.  </p>
-<p>MÀU SẮC: Xanh in họa tiết</p>
-
-        
+- 29% Bamboo từ sợi tre thiên nhiên thấm hút tốt và tạo cảm giác mềm mại, thoáng khí. Ngoài ra chất liệu này có khả năng kháng khuẩn, triệt tiêu nấm mốc phát sinh trên áo, khử mùi hôi giúp phái mạnh luôn tự tin dù trong bất kỳ hoàn cảnh nào.
+- 45% Polyester giúp áo mỏng nhẹ, có độ trơn trượt, màu sắc nét và giữ màu tốt theo thời gian.
+- 13% Cotton đem đến sự mềm mại, xốp nhẹ và thoáng khí.
+- 13% Mint gia tăng sự thoáng mát.
+<p>
+MÀU SẮC: Xanh biển kẻ trắng</p>
+          </p>
         </div>
       </div>
     </>

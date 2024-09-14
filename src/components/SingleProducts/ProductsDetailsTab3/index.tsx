@@ -29,7 +29,7 @@ const ProductsDetailsTab: React.FC = () => {
                 className={`list ${activeTab === 1 ? "current" : ""}`}
                 onClick={() => handleTabClick(1)}
               >
-                <div className="dot"></div> THÔNG TIN SẢN PHẨM
+                <div className="dot"></div> HƯỚNG DẪN CHỌN SIZE
               </li> 
             </ul>
           </div>

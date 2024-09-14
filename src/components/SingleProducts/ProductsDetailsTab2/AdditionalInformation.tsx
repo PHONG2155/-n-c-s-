@@ -9,20 +9,16 @@ const AdditionalInformation: React.FC = () => {
         <div className="products-details-tab-content">
           <ul className="additional-information">
             <li>
-              <span>Brand:</span> ThemeForest
+              <span> S:</span>1m60 - 1m70  , 50 - 60 kg
             </li>
             <li>
-              <span>Color:</span> Brown
+              <span>M:</span>1m65 - 1m75  , 55 - 65 kg
             </li>
             <li>
-              <span>Size:</span> Large, Medium
+              <span>L:</span>1m70 - 1m80  ,  60 - 70 kg
+
             </li>
-            <li>
-              <span>Weight:</span> 27 kg
-            </li>
-            <li>
-              <span>Dimensions:</span> 16 x 22 x 123 cm
-            </li>
+           
           </ul>
         </div>
       </div>

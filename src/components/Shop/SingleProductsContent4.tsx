@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import pagination styles
 import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
 import RelatedProducts from "../SingleProducts/RelatedProducts";
-import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab";
+import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab4";
 
 const SingleProductsContent: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
@@ -46,7 +46,7 @@ const SingleProductsContent: React.FC = () => {
             >
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.jpg"
+                  src="/images/shop/nam4.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -55,7 +55,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.1.jpg"
+                  src="/images/shop/nam4.1.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -64,7 +64,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.2.jpg"
+                  src="/images/shop/nam4.2.jpg"
                   alt="product"
                   width={800}
                   height={850}
@@ -76,11 +76,11 @@ const SingleProductsContent: React.FC = () => {
 
           <div className="col-lg-6">
             <div className="product-details-desc">
-              <h3>ÁO SƠ MI NGẮN TAY HỌA TIẾT</h3>
+              <h3>ÁO SƠ MI NGẮN TAY XANH BIỂN KẺ </h3>
 
               <div className="price">
-                <span className="new-price">320.000 VNĐ</span>
-                <span className="old-price">400.000 VNĐ</span>
+                <span className="new-price">270.000 VNĐ</span>
+                <span className="old-price">320.000 VNĐ</span>
               </div>
               <p>
                Chọn size

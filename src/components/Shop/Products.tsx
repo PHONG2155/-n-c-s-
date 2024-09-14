@@ -103,7 +103,7 @@ const Products: React.FC = () => {
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY MÀU TRẮNG</Link>
+                    <Link href="/shop/single-products3">ÁO SƠ MI NGẮN TAY MÀU TRẮNG</Link>
                   </h3>
                   <div className="price">
                     <span className="new">310.000 VNĐ</span>
@@ -149,7 +149,7 @@ const Products: React.FC = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
-                  <Link href="/shop/single-products">
+                  <Link href="/shop/single-products4">
                     <Image
                       src="/images/shop/nam4.jpg"
                       alt="XANH BIỂN KẺ"
@@ -167,7 +167,7 @@ const Products: React.FC = () => {
 
                 <div className="product-content">
                   <h3>
-                    <Link href="/shop/single-products">XANH BIỂN KẺ</Link>
+                    <Link href="/shop/single-products">ÁO SƠ MI NGẮN TAY XANH BIỂN KẺ</Link>
                   </h3>
                   <div className="price">
                     <span className="new">270.000 VNĐ</span>
@@ -181,7 +181,7 @@ const Products: React.FC = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
-                  <Link href="/shop/single-products">
+                  <Link href="/shop/single-products5">
                     <Image
                       src="/images/shop/nam5.jpg"
                       alt="ÁO SƠ MI NGẮN TAY TRẮNG SAO"
@@ -203,6 +203,7 @@ const Products: React.FC = () => {
                   </h3>
                   <div className="price">
                     <span className="new">280.000 VNĐ</span>
+                    <span className="old">320.000 VNĐ</span>
                   </div>
                 </div>
               </div>
@@ -212,7 +213,7 @@ const Products: React.FC = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-product-box">
                 <div className="product-image">
-                  <Link href="/shop/single-products">
+                  <Link href="/shop/single-products6">
                     <Image
                       src="/images/shop/nam6.jpg"
                       alt="ÁO SƠ MI NGẮN TAY XANH CARO"
